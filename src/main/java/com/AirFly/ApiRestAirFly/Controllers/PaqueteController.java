@@ -8,7 +8,8 @@ import com.AirFly.ApiRestAirFly.Models.Entitys.Paquete;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api-airfly.com")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/api-airfly.com/")
 public class PaqueteController {
 
     @Autowired
@@ -31,8 +32,8 @@ public class PaqueteController {
     }
 
     @PutMapping("paquete")
-    public Paquete actualizarPaquete(@RequestBody int id, Paquete paquete){
-        return service.actualizarPaquete(id, paquete);
+    public Paquete actualizarPaquete(@RequestBody Paquete paquete){
+        return service.actualizarPaquete(paquete);
     }
 
     @DeleteMapping("paquete/{id}")

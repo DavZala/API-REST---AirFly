@@ -10,8 +10,8 @@ public interface IPaquete {
     public List<Paquete> obtenerPaquetes();
     public Paquete obtenerPaquete(int id);
     public Paquete nuevoPaquete(Paquete paquete);
-    public Paquete actualizarPaquete(int id, Paquete paquete);
-    public void eliminarPaquete(int id);
+    public Paquete actualizarPaquete(Paquete paquete);
+    public void eliminarPaquete (int id);
 
 
 }

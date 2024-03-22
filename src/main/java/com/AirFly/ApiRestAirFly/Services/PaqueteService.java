@@ -28,8 +28,8 @@ public class PaqueteService implements IPaquete{
     }
 
     @Override
-    public Paquete actualizarPaquete(int id, Paquete paquete) {
-        Paquete paqueteAux = obtenerPaquete(id);
+    public Paquete actualizarPaquete(Paquete paquete) {
+        Paquete paqueteAux = obtenerPaquete(paquete.getId());
         if (paqueteAux != null){
             return repository.save(paquete);
         }else{
